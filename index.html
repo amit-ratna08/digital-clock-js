@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <title> The Clock </title>
+</head>
+
+<body class="color1">
+    <embed name="GoodEnough" src="sound.mp3" loop="true" hidden="true" autostart="true">
+
+    <div class="head">
+        <div class="logo">
+            <div class="logo-img">
+                <img src="clock.png" alt="" height="160px" width="160px">
+                <div class="circle">.</div>
+                <div class="center"></div>
+                <div class="minute" id="logo-min"></div>
+                <div class="hour" id="logo-hour"></div>
+                <div class="second" id="logo-sec"></div>
+            </div>
+            <div class="logo-txt">
+                <img src="logo-text.png" alt="">
+            </div>
+        </div>
+        <div class="displaytime font1">
+            <table>
+                <tr>
+
+                    <td style="background-color: white;">
+                        <P class="font1">Time</P>
+                    </td>
+                    <td class="small"></td>
+                    <td>
+                        <p id="hours"></p>
+                        <p>hours</p>
+                    </td>
+                    <td class="small">:</td>
+                    <td>
+                        <p id="mins"></p>
+                        <p>mins</p>
+                    </td>
+                    <td class="small">:</td>
+                    <td>
+                        <p id="secs"></p>
+                        <p>secs</p>
+                    </td>
+                    <td class="small"></td>
+                    <td style="color: white; width: 90px ;background: linear-gradient(90deg, rgba(126,84,238,1) 0%, rgba(246,92,254,1) 100%);">
+                        <font id="apm"></font>
+                    </td>
+
+                </tr>
+            </table>
+            <div class="back-box1"></div>
+            <div class="back-box2"></div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="leftside font1">
+            <div class="timetable">
+                <span class="material-icons" style="color: #6b04e0; margin: 0px 10px 0px 0px;">
+                    light_mode
+                    </span> Set wake up time : <select name="mor-time" id="mor-time" class="right">
+                        <option value="0"> default </option>
+                        <option value="1"> 01 AM - 02 AM</option>
+                        <option value="2"> 02 AM - 03 AM</option>
+                        <option value="3"> 03 AM - 04 AM</option>
+                        <option value="4"> 04 AM - 05 AM</option>
+                        <option value="5"> 05 AM - 06 AM</option>
+                        <option value="6"> 06 AM - 07 AM</option>
+                        <option value="7"> 07 AM - 08 AM</option>
+                        <option value="8"> 08 AM - 09 AM</option>
+                        <option value="9"> 09 AM - 10 AM</option>
+                        <option value="10"> 10 AM - 11 AM</option>
+                        <option value="11"> 11 AM - 12 PM</option>
+                        <option value="12"> 12 PM - 01 PM</option>
+                        <option value="13"> 01 PM - 02 PM</option>
+                        <option value="14"> 02 PM - 03 PM</option>
+                        <option value="15"> 03 PM - 04 PM</option>
+                        <option value="16"> 04 PM - 05 PM</option>
+                        <option value="17"> 05 PM - 06 PM</option>
+                        <option value="18"> 06 PM - 07 PM</option>
+                        <option value="19"> 07 PM - 08 PM</option>
+                        <option value="20"> 08 PM - 09 PM</option>
+                        <option value="21"> 09 PM - 10 PM</option>
+                        <option value="22"> 10 PM - 11 PM</option>
+                        <option value="23"> 11 PM - 12 PM</option>
+                        <option value="24"> 12 PM - 01 AM</option>
+
+                    </select>
+                <br>
+                <div class="line1"></div>
+                <br> <span class="material-icons" style="color: #6b04e0; margin: 0px 10px 0px 0px;">
+                    restaurant_menu
+                    </span> Set lunch time :<select name="mor-time" id="after-time" class="right">
+                        <option value="0"> default </option>
+                        <option value="1"> 01 AM - 02 AM</option>
+                        <option value="2"> 02 AM - 03 AM</option>
+                        <option value="3"> 03 AM - 04 AM</option>
+                        <option value="4"> 04 AM - 05 AM</option>
+                        <option value="5"> 05 AM - 06 AM</option>
+                        <option value="6"> 06 AM - 07 AM</option>
+                        <option value="7"> 07 AM - 08 AM</option>
+                        <option value="8"> 08 AM - 09 AM</option>
+                        <option value="9"> 09 AM - 10 AM</option>
+                        <option value="10"> 10 AM - 11 AM</option>
+                        <option value="11"> 11 AM - 12 PM</option>
+                        <option value="12"> 12 PM - 01 PM</option>
+                        <option value="13"> 01 PM - 02 PM</option>
+                        <option value="14"> 02 PM - 03 PM</option>
+                        <option value="15"> 03 PM - 04 PM</option>
+                        <option value="16"> 04 PM - 05 PM</option>
+                        <option value="17"> 05 PM - 06 PM</option>
+                        <option value="18"> 06 PM - 07 PM</option>
+                        <option value="19"> 07 PM - 08 PM</option>
+                        <option value="20"> 08 PM - 09 PM</option>
+                        <option value="21"> 09 PM - 10 PM</option>
+                        <option value="22"> 10 PM - 11 PM</option>
+                        <option value="23"> 11 PM - 12 PM</option>
+                        <option value="24"> 12 PM - 01 AM</option>
+
+                    </select>
+                <br>
+                <div class="line2"></div>
+                <br> <span class=" material-icons " style="color: #6b04e0; margin: 0px 10px 0px 0px;"> dinner_dining
+                </span> Set nap time :<select name="mor-time" id="night-time" class="right">
+                    <option value="0"> default </option>
+                        <option value="1"> 01 AM - 02 AM</option>
+                        <option value="2"> 02 AM - 03 AM</option>
+                        <option value="3"> 03 AM - 04 AM</option>
+                        <option value="4"> 04 AM - 05 AM</option>
+                        <option value="5"> 05 AM - 06 AM</option>
+                        <option value="6"> 06 AM - 07 AM</option>
+                        <option value="7"> 07 AM - 08 AM</option>
+                        <option value="8"> 08 AM - 09 AM</option>
+                        <option value="9"> 09 AM - 10 AM</option>
+                        <option value="10"> 10 AM - 11 AM</option>
+                        <option value="11"> 11 AM - 12 PM</option>
+                        <option value="12"> 12 PM - 01 PM</option>
+                        <option value="13"> 01 PM - 02 PM</option>
+                        <option value="14"> 02 PM - 03 PM</option>
+                        <option value="15"> 03 PM - 04 PM</option>
+                        <option value="16"> 04 PM - 05 PM</option>
+                        <option value="17"> 05 PM - 06 PM</option>
+                        <option value="18"> 06 PM - 07 PM</option>
+                        <option value="19"> 07 PM - 08 PM</option>
+                        <option value="20"> 08 PM - 09 PM</option>
+                        <option value="21"> 09 PM - 10 PM</option>
+                        <option value="22"> 10 PM - 11 PM</option>
+                        <option value="23"> 11 PM - 12 PM</option>
+                        <option value="24"> 12 PM - 01 AM</option>
+
+                </select>
+            </div>
+
+            <div class="displays" id="displays">
+                <p id="wish"></p>
+            </div>
+
+            <div class="button font1" id="button" onclick="changeImg()"> Party Time !</div>
+            <div class="displays1" id="displays1">
+                <p id="pera1"></p>
+                <p id="pera2"></p>
+                <p id="pera3"></p>
+            </div>
+        </div>
+
+
+        <div class="rightside">
+            <div class="display-img" id="changeimg">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p></p>
+    </div>
+    <div class="bg-anima">
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="back-ground">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <script src="min.js"></script>
+</body>
+
+</html>
